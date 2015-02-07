@@ -9,8 +9,8 @@ block content
         li Sell
         li Needbook 
   div.searchBar
-    textarea(name="search", placeholder="Search Books", rows="1", cols="100")
-    a(href="#", class="btn btn-primary") Search
+    textarea(name="search", placeholder="Search Books", rows="1", cols="100" ng-model="searchVal")
+    a(href="#", class="btn btn-primary", ng-click="searchBook()") Search
 
   div.slider
     div.slide.active-slide
@@ -58,17 +58,17 @@ block content
   div.main.row
     div.hotSearch.col-md-6
       div.hotPicture
-        img(src ="/public/hotspot.png") 
+        img(src ="/public/hotspot.png")
       div.hotSearch1.col-md-6
-        div.thumbnail 
-          img(src='http://goo.gl/0Kd7UO')
-        div.thumbnail   
-          img(src='http://goo.gl/0Kd7UO')
+        div.thumbnail
+          img(src='{{books[0].photo}}')
+        div.thumbnail
+          img(src='{{books[1].photo}}')
       div.hotSearch2.col-md-6
         div.thumbnail
-          img(src='http://goo.gl/0Kd7UO')
+          img(src='{{books[2].photo}}')
         div.thumbnail
-          img(src='http://goo.gl/0Kd7UO')
+          img(src='{{books[3].photo}}')
     div.needed.col-md-3
       div.need
         img(src="/public/need.png")

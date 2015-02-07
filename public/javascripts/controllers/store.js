@@ -40,7 +40,7 @@
             };
             */
              $scope.searchBook = function () {
-                 var val = $scope.search;
+                 var val = $scope.searchVal;
                  var search = {title: val};
                  $http.post('/api/searchBook', search, function (results) {
                     $scope.searchRes = results;
