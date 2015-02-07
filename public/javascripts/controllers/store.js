@@ -1,15 +1,16 @@
-angular.module('store', ['ngResource'])
-    .controller('storeController', ['$scope', '$resource',
+(function(angular) {
+    var app = angular.module('store', ['ngResource']);
+    app.controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
 
             $scope.test = 3;
 
             var Book = $resource('/api/book');
             /*
-            Book.query(function (results) {
-                $scope.books = results['items'];
-            });
-            */
+             Book.query(function (results) {
+             $scope.books = results['items'];
+             });
+             */
             $scope.books = [];
 
             //noinspection CommaExpressionJS
@@ -24,21 +25,22 @@ angular.module('store', ['ngResource'])
                 book.$save(function (result) {
                     $scope.books.push(result);
                 });
-            }
+            };
             /*
-            $scope.sellBook = function () {
-                var book = new Book();
+             $scope.sellBook = function () {
+             var book = new Book();
 
-                book.delete(function () {
-                    $scope.selected.destroy();
-                });
-            },
+             book.delete(function () {
+             $scope.selected.destroy();
+             });
+             },
 
-            $scope.searchBook = function () {
-                var val = $scope.searchVal;
-                var search = {title: val};
-                $http.post('/api/search', search, function (results) {
-                    $scope.searchRes = results;
-                });
-            }*/
+             $scope.searchBook = function () {
+             var val = $scope.searchVal;
+             var search = {title: val};
+             $http.post('/api/search', search, function (results) {
+             $scope.searchRes = results;
+             });
+             }*/
         }]);
+}(angular));
