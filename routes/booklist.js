@@ -10,7 +10,7 @@ function BookList(connection) {
 BookList.prototype = {
   showBooks: function(req, res) {
     book.find({ itemCompleted : false }, function foundBooks(err, items) {
-    res.render('index', { title: 'Selling Books', books: items })
+    res.render('index', { title: 'Selling Books', books: items });
     });
   },
 
