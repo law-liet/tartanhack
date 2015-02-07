@@ -6,11 +6,11 @@
             $scope.test = 3;
 
             var Book = $resource('/api/book');
-            /*
-             Book.query(function (results) {
-             $scope.books = results['items'];
-             });
-             */
+
+            Book.query(function (results) {
+                $scope.books = results['items'];
+            });
+
             $scope.books = [];
 
             //noinspection CommaExpressionJS
