@@ -24,6 +24,7 @@ a {
 
 .header .menu {
   float: right;
+  float: bottom;
   list-style: none;
   margin-top: 0px;
 }
