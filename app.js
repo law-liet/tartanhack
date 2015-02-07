@@ -8,12 +8,12 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
-//var BookList = require('./routes/booklist');
+var BookList = require('./routes/booklist');
 
-var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI
+var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 
 var app = express();
-//var bookList = new BookList(connectionString);
+var bookList = new BookList(connectionString);
 mongoose.connect(connectionString);
 
 
