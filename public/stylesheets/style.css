@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -14,7 +14,6 @@ a {
 .header {
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #ddd;
-  
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   
