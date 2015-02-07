@@ -108,6 +108,8 @@ a {
 .slider-dots li.active-dot {
   color: #363636;
 }
-.hotSearch .h1{
+.hotSearch {
   text-align: center;	
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
 }
