@@ -88,6 +88,8 @@ block content
     ul
       li {{book.itemName}}
       li {{book.ownerName}}
+      li
+        img(url="{{book.photo}}")
   div
     form(ng-submit="addBook()")
       input(type="text" placeholder="title" ng-model="bookName")
