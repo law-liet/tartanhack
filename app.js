@@ -31,10 +31,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
 app.use('/', routes);
+/*
 app.get('/', bookList.showBooks);
 app.post('/api/book', bookList.addBook);
 app.delete('/api/book', bookList.soldBook);
 app.post('/api/searchBook', bookList.searchBook);
+*/
 //app.use('/users', users);
 
 // catch 404 and forward to error handler
