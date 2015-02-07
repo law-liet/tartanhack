@@ -47,7 +47,7 @@ a {
 }
 
 .slide {
-  background-image: url("../public/newlyadd.png");
+  background-image: img(src="../public/newlyadd.png");
   height: 100%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
