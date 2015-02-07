@@ -117,10 +117,13 @@ a {
 }
 .need{
   text-align: center;
-  padding : 10px;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 15px;
+}
+
+.need p{
+  padding: 10px;
 }
 .hotPicture{
   text-align: center;
