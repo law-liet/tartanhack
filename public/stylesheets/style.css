@@ -16,7 +16,6 @@ a {
   border-bottom: 1px solid #ddd;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  
   font-size: 30px;
   padding-bottom: 0px;
   margin-bottom: 0px;
@@ -69,7 +68,10 @@ a {
   text-align: center;
 }
 .slide-image {
+  margin-top: 20px;	
   text-align: right;
+  vertical-align: center;
+
 }
 
 .slider-nav {
@@ -108,8 +110,8 @@ a {
 .slider-dots li.active-dot {
   color: #363636;
 }
-.hotSearch {
-  text-align: center;	
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
+
+.hotSearch{
+  text-align: left;	
+  padding: 0px;
 }
