@@ -101,3 +101,11 @@ block content
       input(type="text" placeholder="price" ng-model="bookPrice")
       textarea(placeholder="description" ng-model="bookDescription")
       input(type="submit" value="submit")
+    form(ng-submit="searchBook()")
+      input(type="text" placeholder="search" ng-model="search")
+  div(ng-repeat="book in searchRes")
+    ul
+      li {{book.itemName}}
+      li {{{book.ownerName}}
+      li
+        img(url="{{book.photo}}")
