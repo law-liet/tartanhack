@@ -16,32 +16,39 @@ BookList.prototype = {
 
   addBook: function(req,res) {
     var item = req.body;
-    var newBook = new book();
-    newBook.itemName = item.itemName;
-    newBook.ownerName = item.ownerName;
-    newBook.ownerTelephone = item.ownerTelephone;
-    newBook.itemCategory = item.itemCategory;
-    newBook.save(function savedTask(err) {
+    var newBook = new book(item);
+    newBook.save(function savedTask(err, result) {
       if(err) {
         throw err;
       }
+      res.json(result);
     });
-    res.redirect('/');
+    //res.redirect('/');
   },
 
-  completeBook: function(req,res) {
+  soldBook: function(req,res) {
     var completedBooks = req.body;
-    for(bookId in completedBooks) {
-      if(completedBooks[bookId]=='true') {
-        var conditions = { _id: bookId };
-        var updates = { itemCompleted: completedBooks[bookId] };
-        book.update(conditions, updates, function updatedBook(err) {
-          if(err) {    
-          	throw err;
+    for (bookId in completedBooks) {
+      if (completedBooks[bookId] == 'true') {
+        var conditions = {_id: bookId};
+        var updates = {itemCompleted: completedBooks[bookId]};
+        book.update(conditions, updates, function updatedBook(err, result) {
+          if (err) {
+            throw err;
           }
+          res.json(result);
         });
       }
     }
-    res.redirect('/');
+  },
+    //res.redirect('/');
+  searchBook: function(req, res) {
+    book.find(req.body, function(err,results){
+      if (!err) {
+        throw err;
+      }
+      res.json(results);
+    });
+
   }
 }

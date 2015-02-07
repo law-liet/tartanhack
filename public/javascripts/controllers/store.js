@@ -1,19 +1,45 @@
 (function(){
-    var app = angular.module('store', ['book']);
+    var store = angular.module('store');
 
-    app.controller('bookController', ['$scope',
+    store.controller('bookController', ['$scope',
         function ($scope){
 
         }]);
 
-    app.controller('storeController', ['$scope', '$resource',
+    store.controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
-            var Store = $resource('/api/store')
+
+            var Book = $resource('/api/book');
+
+            Book.query(function(results){
+                $scope.books = results['items'];
+            });
+
+            $scope.books = [];
 
             $scope.addBook = function(){
-                var store = new Store();
+                var book = new Book();
 
-                store.$save();
+                book.$save(function(result){
+                    $scope.books.push(result);
+                });
+            }
+
+            $scope.sellBook = function(){
+               var book = new Book();
+
+               book.$destroy(function(){
+                    $scope.selected.destroy();
+               });
+            }
+
+            $scope.searchBook = function(){
+                var key = $scope.searchKey;
+                var val = $scope.searchVal;
+                var search = {key: val};
+                $http.post('/api/search',search,function(results){
+                    $scope.searchRes = results;
+                });
             }
         }]);
 })();

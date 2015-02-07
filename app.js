@@ -15,6 +15,9 @@ var app = express();
 
 mongoose.connect(connectionString);
 
+var BookList = require('./routes/bookList');
+var bookList = new BookList(process.env.CUSTOMCONNSTR_MONGOLAB_URI);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -28,7 +31,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.get('/', bookList.showBooks);
+app.post('/api/book', bookList.addBook);
+app.delete('/api/book', bookList.soldBook);
+app.post('/api/searchBook', bookList.searchBook);
+//app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
