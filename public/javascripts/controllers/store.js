@@ -18,6 +18,7 @@
                 var book = new Book();
                 book.itemName = $scope.bookName;
                 book.ownerName = $scope.bookProvider;
+                book.photo = $scope.bookImage;
                 book.ownerTelephone = $scope.provederCell;
                 book.subject = $scope.bookSubject;
                 book.price = $scope.bookPrice;
@@ -26,21 +27,21 @@
                     $scope.books.push(result);
                 });
             };
-            /*
-             $scope.sellBook = function () {
-             var book = new Book();
 
-             book.delete(function () {
-             $scope.selected.destroy();
-             });
-             },
+            $scope.sellBook = function () {
+                var book = new Book();
+
+                book.delete(function () {
+                    $scope.selected.destroy();
+            });
+            };
 
              $scope.searchBook = function () {
-             var val = $scope.searchVal;
-             var search = {title: val};
-             $http.post('/api/search', search, function (results) {
-             $scope.searchRes = results;
-             });
-             }*/
+                 var val = $scope.searchVal;
+                 var search = {title: val};
+                 $http.post('/api/search', search, function (results) {
+                    $scope.searchRes = results;
+                 });
+             }
         }]);
 }(angular));
