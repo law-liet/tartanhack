@@ -43,11 +43,11 @@ a {
   width: 100%;
   height: 470px;
   border-bottom: 1px solid #ddd;
-  background-image: url("../public/newlyadd.png");
+
 }
 
 .slide {
-  background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+  background: transparent url("../public/newlyadd.png") center center no-repeat;
   background-size: cover;
   display: none;
   position: absolute;
