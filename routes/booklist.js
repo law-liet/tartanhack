@@ -9,7 +9,7 @@ function BookList(connection) {
 
 BookList.prototype = {
   showBooks: function(req, res) {
-    book.find({ itemSold : false }, function foundBooks(err, items) {
+    book.find({}, function foundBooks(err, items) {
     res.render('index', { title: 'Selling Books', books: items });
     });
   },
@@ -54,4 +54,4 @@ BookList.prototype = {
     });
 
   }
-}
+};
