@@ -154,3 +154,8 @@ a {
   margin-left: 10px;
   vertical-align: top;
 }
+
+.category{
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
