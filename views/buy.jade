@@ -1,12 +1,12 @@
 extends index
 
 block eform
-    div
-      form(ng-submit="addBook()")
-        input(type="text" placeholder="title" ng-model="bookName")
-        input(type="text" placeholder="provider" ng-model="bookProvider")
-        input(type="text" placeholder="cell number" ng-model="providerCell")
-        input(type="text" placeholder="email" ng-model="providerEmail")
-        input(type="text" placeholder="subject" ng-model="bookSubject")
-        input(type="text" placeholder="price" ng-model="bookPrice")
-        textarea(placeholder="description" ng-model="bookDescription")
+  div
+    form(ng-submit="addBook()")
+      input(type="text" placeholder="title" ng-model="bookName")
+      input(type="text" placeholder="provider" ng-model="bookProvider")
+      input(type="text" placeholder="cell number" ng-model="providerCell")
+      input(type="text" placeholder="email" ng-model="providerEmail")
+      input(type="text" placeholder="subject" ng-model="bookSubject")
+      input(type="text" placeholder="price" ng-model="bookPrice")
+      textarea(placeholder="description" ng-model="bookDescription")
