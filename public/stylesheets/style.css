@@ -47,7 +47,7 @@ a {
 }
 
 .slide {
-  background-image: url("../public/newlyadd.png");
+  background-image: url("/public/newlyadded-2.png");
   height: 100%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -69,7 +69,7 @@ a {
   text-align: center;
 }
 .slide-image {
-  text-align: center;
+  text-align: right;
 }
 
 .slider-nav {
