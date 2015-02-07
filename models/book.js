@@ -7,9 +7,11 @@ var BookSchema = new Schema({
   ownerTelephone: String,
   price         : String,
   email         : String,
-  itemDate      : { type: Date, default: Date.now}, 
-  //not sure here what to write//
-  photo         : url,
+  photo         : url,//not sure how to store pictures
+  subject       : String,
+  searchIndex   : String,
+  description   : String, 
+  itemDate      : { type: Date, default: Date.now},
   itemSold      : { type: Boolean, default: false}
 });  
 
