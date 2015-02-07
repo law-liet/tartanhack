@@ -65,6 +65,9 @@ a {
     display: block;
 }
 
+.slide-background {
+  text-align: center;
+}
 .slide-image {
   text-align: center;
 }
