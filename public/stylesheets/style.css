@@ -14,3 +14,7 @@ a {
   padding: 14px 10px;
   text-transform: uppercase;
 }
+
+.nav li {
+  display: inline;
+}
