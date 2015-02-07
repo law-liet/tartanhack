@@ -1,4 +1,4 @@
-angular.module('store', [ngResource])
+angular.module('store', ['ngResource'])
     .controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
 
