@@ -58,10 +58,11 @@ block content
   div.main.row
     div.hotSearch.col-md-6
       div.hotPicture
-        img(src ="/public/hotspot.png" data-toggle="popover" title="{{book[0].itemName}}" data-content="{{books[0].description}}")
+        img(src ="/public/hotspot.png")
       div.hotSearch1.col-md-6
         div.thumbnail
           img(src='{{books[0].photo}}')
+          buttion.btn.btn-lg(type="button" data-toggle="popover" title="{{book[0].itemName}}" data-content="{{books[0].description}})
         div.thumbnail
           img(src='{{books[1].photo}}')
       div.hotSearch2.col-md-6
