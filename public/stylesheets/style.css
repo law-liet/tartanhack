@@ -68,7 +68,7 @@ a {
   text-align: center;
 }
 .slide-image {
-  margin-top: 20px;	
+  margin-top: 30px;	
   text-align: right;
   vertical-align: center;
 
@@ -131,4 +131,7 @@ a {
 
 .needword{
   border-top: 15px;
+}
+.slide-image p{
+  color: #ffffff;
 }
