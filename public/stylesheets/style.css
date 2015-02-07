@@ -141,4 +141,9 @@ a {
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   text-align: center;
+  padding: 10px;
+}
+
+.searchBar a{
+  vertical-align: top;
 }
