@@ -17,20 +17,21 @@ a {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   
-  font-size: 17px;
-  padding: 0px;
+  font-size: 30px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .header .menu {
   float: right;
   list-style: none;
-  margin-top: 5px;
+  margin-top: 80px;
 }
 
 .menu > li {
   display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .menu a {
