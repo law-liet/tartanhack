@@ -1,7 +1,11 @@
 body {
   padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+  background-color: url("/public/Background.png");
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
 }
 
 a {
@@ -149,4 +153,9 @@ a {
 .searchBar a{
   margin-left: 10px;
   vertical-align: top;
+}
+
+.category{
+  font-size: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
