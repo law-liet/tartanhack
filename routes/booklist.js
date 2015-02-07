@@ -9,7 +9,7 @@ function BookList(connection) {
 
 BookList.prototype = {
   showBooks: function(req, res) {
-    book.find({ itemCompleted : false }, function foundBooks(err, items) {
+    book.find({ itemSold : false }, function foundBooks(err, items) {
     res.render('index', { title: 'Selling Books', books: items });
     });
   },
@@ -28,10 +28,11 @@ BookList.prototype = {
 
   soldBook: function(req,res) {
     var completedBooks = req.body;
+    /*
     for (bookId in completedBooks) {
       if (completedBooks[bookId] == 'true') {
         var conditions = {_id: bookId};
-        var updates = {itemCompleted: completedBooks[bookId]};
+        var updates = {itemSold: completedBooks[bookId]};
         book.update(conditions, updates, function updatedBook(err, result) {
           if (err) {
             throw err;
@@ -40,6 +41,7 @@ BookList.prototype = {
         });
       }
     }
+    */
   },
     //res.redirect('/');
   searchBook: function(req, res) {
