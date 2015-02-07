@@ -92,23 +92,25 @@ block content
          
   h1 Hello
   p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
-  div(ng-repeat="book in books")
-    ul
-      li {{book.itemName}}
-      li {{book.ownerName}}
-      li
-        img(url="{{book.photo}}")
   div
     form(ng-submit="addBook()")
-      input(type="text" placeholder="title" ng-model="bookName")
-      input(type="file" placeholder="picture" ng-model="bookImage")
-      input(type="text" placeholder="provider" ng-model="bookProvider")
-      input(type="text" placeholder="cell number" ng-model="providerCell")
-      input(type="text" placeholder="email" ng-model="providerEmail")
-      input(type="text" placeholder="subject" ng-model="bookSubject")
-      input(type="text" placeholder="price" ng-model="bookPrice")
-      textarea(placeholder="description" ng-model="bookDescription")
-      input(type="submit" value="submit")
+      div.form-group
+        input.form-controll(type="text" placeholder="title" ng-model="bookName")
+      div.form-group
+        input.form-controll(type="file" placeholder="picture" ng-model="bookImage")
+      div.form-group
+        input.form-controll(type="text" placeholder="provider" ng-model="bookProvider")
+      div.form-group
+        input.form-controll(type="text" placeholder="cell number" ng-model="providerCell")
+      div.form-group
+        input.form-controll(type="text" placeholder="email" ng-model="providerEmail")
+      div.form-group
+        input(type="text" placeholder="subject" ng-model="bookSubject")
+      div.form-group
+        input(type="text" placeholder="price" ng-model="bookPrice")
+      div.form-group
+        textarea(placeholder="description" ng-model="bookDescription")
+      button(type="submit" value="submit")
     form(ng-submit="searchBook()")
       input(type="text" placeholder="search" ng-model="search")
       input(type="submit" value="search")
