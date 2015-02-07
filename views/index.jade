@@ -74,8 +74,10 @@ block content
         img(src='/public/category.png') 
   h1 Hello
   p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
-  input(type="test" ng-model="test")
-  p {{test}}
+  div(ng-repeat="book in books")
+    ul
+      li {{book.itemName}}
+      li {{book.ownerName}}
   div
     form(ng-submit="addBook()")
       input(type="text" placeholder="title" ng-model="bookName")
