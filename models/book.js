@@ -7,7 +7,7 @@ var BookSchema = new Schema({
   ownerTelephone: String,
   price         : String,
   email         : String,
-  photo         : url,//not sure how to store pictures
+  //photo         : url,//not sure how to store pictures
   subject       : String,
   searchIndex   : String,
   description   : String, 
