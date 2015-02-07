@@ -9,6 +9,9 @@ block content
         li Sell
         li Needbook 
   div.searchBar
+    textarea(name="search", placeholder="Search Books", rows="1", cols="100")
+    div.button-group.pull-right
+      a(href="#", class="btn btn-primary") Post
 
   div.slider
     div.slide.active-slide
@@ -78,9 +81,15 @@ block content
       div.category
         img(src='/public/category.png')
         ul 
-        li.a(href="#" ) Math
-        li.a(href="#" ) CS
-        li.a(href="#" ) Physics
+        li 
+          a(href="#")
+            Math
+        li 
+          a(href="#")
+            CS
+        li 
+          a(href="#")
+            Physics
          
   h1 Hello
   p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
