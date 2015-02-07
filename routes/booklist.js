@@ -19,7 +19,7 @@ BookList.prototype = {
     var newBook = new book();
     newBook.itemName = item.itemName;
     newBook.ownerName = item.ownerName;
-    newBook.ownerTelephone = item.ownerTelephone
+    newBook.ownerTelephone = item.ownerTelephone;
     newBook.itemCategory = item.itemCategory;
     newBook.save(function savedTask(err) {
       if(err) {
@@ -29,13 +29,13 @@ BookList.prototype = {
     res.redirect('/');
   },
 
-  completeTask: function(req,res) {
-    var completedTasks = req.body;
-    for(taskId in completedTasks) {
-      if(completedTasks[taskId]=='true') {
-        var conditions = { _id: taskId };
-        var updates = { itemCompleted: completedTasks[taskId] };
-        task.update(conditions, updates, function updatedTask(err) {
+  completeBook: function(req,res) {
+    var completedBooks = req.body;
+    for(bookId in completedBooks) {
+      if(completedBooks[bookId]=='true') {
+        var conditions = { _id: bookId };
+        var updates = { itemCompleted: completedBooks[bookId] };
+        book.update(conditions, updates, function updatedBook(err) {
           if(err) {    
           	throw err;
           }
