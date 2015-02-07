@@ -134,5 +134,18 @@ a {
 }
 .slide-image p{
   color: #ffffff;
+  text-align: right;
+  font-size: 20px;
+}
+
+.searchBar{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
   text-align: center;
+  padding: 10px;
+}
+
+.searchBar a{
+  margin-left: 10px;
+  vertical-align: top;
 }
