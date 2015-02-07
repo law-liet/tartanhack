@@ -6,7 +6,7 @@
 
         }]);
 
-    app.controller('', ['$scope',
+    app.controller('storeController', ['$scope',
         function ($scope) {
 
         }]);
