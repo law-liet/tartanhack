@@ -14,7 +14,7 @@ var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 
 var app = express();
 var bookList = new BookList(connectionString);
-mongoose.connect(connectionString);
+//mongoose.connect(connectionString);
 
 
 // view engine setup
