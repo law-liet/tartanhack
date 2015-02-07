@@ -8,10 +8,11 @@
             var Book = $resource('/api/book');
 
             Book.query(function (results) {
-                $scope.books = results['items'];
+                $scope.books = results;
             });
 
             $scope.books = [];
+            $scope.searchRes = [];
 
             //noinspection CommaExpressionJS
             $scope.addBook = function () {
@@ -37,7 +38,7 @@
             };
 
              $scope.searchBook = function () {
-                 var val = $scope.searchVal;
+                 var val = $scope.search;
                  var search = {title: val};
                  $http.post('/api/search', search, function (results) {
                     $scope.searchRes = results;

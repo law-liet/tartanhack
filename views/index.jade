@@ -97,6 +97,8 @@ block content
     ul
       li {{book.itemName}}
       li {{book.ownerName}}
+      li
+        img(url="{{book.photo}}")
   div
     form(ng-submit="addBook()")
       input(type="text" placeholder="title" ng-model="bookName")
@@ -108,3 +110,12 @@ block content
       input(type="text" placeholder="price" ng-model="bookPrice")
       textarea(placeholder="description" ng-model="bookDescription")
       input(type="submit" value="submit")
+    form(ng-submit="searchBook()")
+      input(type="text" placeholder="search" ng-model="search")
+      input(type="submit" value="search")
+  div(ng-repeat="book in searchRes")
+    ul
+      li {{book.itemName}}
+      li {{{book.ownerName}}
+      li
+        img(url="{{book.photo}}")

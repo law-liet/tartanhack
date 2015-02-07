@@ -17,14 +17,15 @@ BookList.prototype = {
 
   addBook: function(req,res) {
     var item = req.body;
-    var tem_path = req.body.photo.path;
+    /*
+    var tem_path = req.body.photo;
     var target_path = '/public/images'+tem_path;
     fs.rename(tem_path, target_path,function(err){
       if(err) throw err;
       fs.unlink(tem_path, function(){
         if(err) throw err;
       })
-    });
+    });*/
     var newBook = new book(item);
     newBook.save(function savedTask(err, result) {
       if(err) {
