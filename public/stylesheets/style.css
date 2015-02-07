@@ -127,15 +127,14 @@ a {
   font-size: 15px;
 }
 
-.need p{
-  padding: 10px;
-}
+
 .hotPicture{
   text-align: center;
 }
 
 .needword{
-  border-top: 15px;
+  border-top: 20px;
+  padding: 20px;
 }
 .slide-image p{
   color: #ffffff;
