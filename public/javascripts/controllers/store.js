@@ -9,6 +9,8 @@
     store.controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
 
+            $scope.test = 3;
+
             var Book = $resource('/api/book');
 
             Book.query(function(results){
