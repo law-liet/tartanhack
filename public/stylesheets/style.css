@@ -108,3 +108,6 @@ a {
 .slider-dots li.active-dot {
   color: #363636;
 }
+.hotSearch .h1{
+  text-align: center;	
+}
