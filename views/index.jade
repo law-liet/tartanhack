@@ -58,10 +58,11 @@ block content
   div.main.row
     div.hotSearch.col-md-6
       div.hotPicture
-        img(src ="/public/hotspot.png")
+        img(src="/public/hotspot.png")
       div.hotSearch1.col-md-6
         div.thumbnail
-          img(src='{{books[0].photo}}')
+          img(src='{{books[0].photo}}', data-toggle="popover", title="{{book[0].itemName}}}",
+          data-content="{{book[0].description}}")
         div.thumbnail
           img(src='{{books[1].photo}}')
       div.hotSearch2.col-md-6
@@ -86,9 +87,7 @@ block content
           a(href="#") CS
         li 
           a(href="#") Physics
-         
-  h1 Hello
-  p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
+
   div
     form(ng-submit="addBook()")
       div.form-group
@@ -108,7 +107,5 @@ block content
       div.form-group
         textarea(placeholder="description" ng-model="bookDescription")
       button(type="submit" value="submit")
-    form(ng-submit="searchBook()")
-      input(type="text" placeholder="search" ng-model="search")
-      input(type="submit" value="search")
+
 
