@@ -47,8 +47,12 @@ a {
 }
 
 .slide {
-  background: transparent url("../public/newlyadd.png") center center no-repeat;
-  background-size: cover;
+  background-image: url("../public/newlyadd.png");
+  height: 100%;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
   display: none;
   position: absolute;
   top: 0;
