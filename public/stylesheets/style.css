@@ -110,12 +110,8 @@ a {
 .slider-dots li.active-dot {
   color: #363636;
 }
-.hotSearch {
-  text-align: center;	
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-}
+
 .hotSearch .img{
-  text-align: center;	
+  text-align: left;	
   padding: 0px;
 }
