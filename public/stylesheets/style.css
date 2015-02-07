@@ -113,5 +113,6 @@ a {
   font-weight: 300;
 }
 .hotSearch .img{
+  text-align: center;	
   padding: 10px;
 }
