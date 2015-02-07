@@ -145,5 +145,6 @@ a {
 }
 
 .searchBar a{
+  margin-left: 10px;
   vertical-align: top;
 }
