@@ -3,16 +3,17 @@
     app.controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
 
-            $scope.test = 3;
-
             var Book = $resource('/api/book');
+
+
 
             Book.query(function (results) {
                 $scope.books = results;
             });
 
             $scope.books = [];
-            $scope.searchRes = [];
+
+            //$scope.searchRes = [];
 
             //noinspection CommaExpressionJS
             $scope.addBook = function () {
@@ -29,18 +30,19 @@
                 });
             };
 
+            /*
             $scope.sellBook = function () {
                 var book = new Book();
 
                 book.delete(function () {
                     $scope.selected.destroy();
-            });
+                });
             };
-
+            */
              $scope.searchBook = function () {
-                 var val = $scope.search;
+                 var val = $scope.searchVal;
                  var search = {title: val};
-                 $http.post('/api/search', search, function (results) {
+                 $http.post('/api/searchBook', search, function (results) {
                     $scope.searchRes = results;
                  });
              }
