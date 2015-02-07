@@ -5,7 +5,7 @@
         function ($scope){
 
         }]);
-
+    /*
     store.controller('storeController', ['$scope', '$resource',
         function ($scope, $resource) {
 
@@ -41,5 +41,5 @@
                     $scope.searchRes = results;
                 });
             }
-        }]);
+        }]);*/
 })();
