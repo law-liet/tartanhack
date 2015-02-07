@@ -6,7 +6,8 @@ block content
       a(class="logo-icon", href="#")
         img(src="../public/tartan.png")
       ul.menu.pull-right
-        li Sell
+        li
+          a(href="#sell") Sell
         li Needbook 
   div.searchBar
     textarea(name="search", placeholder="Search Books", rows="1", cols="100" ng-model="searchVal")
@@ -102,7 +103,7 @@ block content
          
   h1 Hello
   p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
-  div
+  div#sell
     form(ng-submit="addBook()")
       div.form-group
         input.form-controll(type="text" placeholder="title" ng-model="bookName")
