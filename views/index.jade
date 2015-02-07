@@ -104,9 +104,4 @@ block content
     form(ng-submit="searchBook()")
       input(type="text" placeholder="search" ng-model="search")
       input(type="submit" value="search")
-  div(ng-repeat="book in searchRes")
-    ul
-      li {{book.itemName}}
-      li {{{book.ownerName}}
-      li
-        img(url="{{book.photo}}")
+
