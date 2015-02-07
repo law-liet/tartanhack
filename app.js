@@ -14,10 +14,10 @@ var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI
 var app = express();
 
 mongoose.connect(connectionString);
-
+/*
 var BookList = require('./routes/bookList');
 var bookList = new BookList(process.env.CUSTOMCONNSTR_MONGOLAB_URI);
-
+*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
