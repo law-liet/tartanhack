@@ -138,5 +138,7 @@ a {
 }
 
 .searchBar{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
   text-align: center;
 }
