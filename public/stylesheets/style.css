@@ -18,13 +18,14 @@ a {
   font-weight: 300;
   
   font-size: 17px;
-  padding: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .header .menu {
   float: right;
   list-style: none;
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
 .menu > li {
