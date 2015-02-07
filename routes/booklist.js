@@ -27,7 +27,8 @@ BookList.prototype = {
   },
 
   soldBook: function(req,res) {
-    var completedBooks = req.body;
+    var soldbook = req.body;
+    book.remove(soldbook);
     /*
     for (bookId in completedBooks) {
       if (completedBooks[bookId] == 'true') {

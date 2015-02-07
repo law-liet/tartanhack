@@ -9,10 +9,10 @@ var BookSchema = new Schema({
   email         : String,
   //photo         : url,//not sure how to store pictures
   subject       : String,
-  searchIndex   : String,
+  //searchIndex   : String,
   description   : String, 
-  itemDate      : { type: Date, default: Date.now},
-  itemSold      : { type: Boolean, default: false}
+  itemDate      : { type: Date, default: Date.now}
+  //itemSold      : { type: Boolean, default: false}
 });  
 
 module.exports = mongoose.model('BookModel', BookSchema);
