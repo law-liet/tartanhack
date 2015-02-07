@@ -8,7 +8,7 @@
             var Book = $resource('/api/book');
 
             Book.query(function (results) {
-                $scope.books = results['items'];
+                $scope.books = results;
             });
 
             $scope.books = [];
