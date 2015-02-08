@@ -98,11 +98,7 @@ block content
           li 
             a(href="#") Biology
           li 
-            a(href="#") History    
-
-         
-  h1 Hello
-  p Welcome to Shengyangjun Shabi_@TEST_Tan4#{BIGLEGSU}
+            a(href="#") History
   div#sell
     form(ng-submit="addBook()")
       div.form-group
@@ -121,9 +117,7 @@ block content
         input(type="text" placeholder="price" ng-model="bookPrice")
       div.form-group
         textarea(placeholder="description" ng-model="bookDescription")
-      button(type="submit" value="submit")
-    form(ng-submit="searchBook()")
-      input(type="text" placeholder="search" ng-model="search")
-      input(type="submit" value="search")
+      input(type="submit" value="submit")
+
 
     script $(function () {$('[data-toggle="popover"]').popover()});
